@@ -1,0 +1,38 @@
+package myproject.entity;
+
+import java.io.Serializable;
+import java.util.List;
+
+import javax.annotation.Generated;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+
+/**
+ * Deptエンティティクラス
+ *
+ */
+@Entity
+@Generated(value = {"S2JDBC-Gen 2.4.46", "org.seasar.extension.jdbc.gen.internal.model.EntityModelFactoryImpl"}, date = "2021/03/22 11:43:29")
+public class Dept implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
+    /** idプロパティ */
+    @Id
+    @Column(precision = 10, nullable = false, unique = true)
+    public Integer id;
+
+    /** deptIdプロパティ */
+    @Column(precision = 10, nullable = false, unique = true)
+    public Integer deptId;
+
+    /** deptNameプロパティ */
+    @Column(length = 255, nullable = false, unique = false)
+    public String deptName;
+
+    /** empList関連プロパティ */
+    @OneToMany(mappedBy = "dept")
+    public List<Emp> empList;
+}
