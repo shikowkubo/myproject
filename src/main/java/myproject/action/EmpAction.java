@@ -32,9 +32,6 @@ public class EmpAction {
     private static final String PRE_PAGE_CREATE = "create";
     private static final String PRE_PAGE_DELETE = "delete";
     private static final String PRE_PAGE_SEARCH = "search";
-	public static String outPutFileName = "C:\\Users\\fc10m\\Documents\\tmp";
-	public static String outReadFileName = "C:\\Users\\fc10m\\Documents\\tmp";
-	public static String csvExt = ".csv";
 
     public List<Emp> empItems;
     public List<EmpDto> empDtoList = new ArrayList<EmpDto>();
