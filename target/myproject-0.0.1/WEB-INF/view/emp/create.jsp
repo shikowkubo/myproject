@@ -11,13 +11,11 @@
 <s:form>
 <html:hidden property="id" />
 <html:hidden property="prePage" />
-
 <table>
 <tr>
 	<td>社員番号</td>
 	<td><html:text property="empId"/></td>
 </tr>
-
 <tr>
 	<td>名前</td>
 	<td><html:text property="name" /></td>

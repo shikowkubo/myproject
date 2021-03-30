@@ -24,7 +24,6 @@ table {
 	border-collapse: collapse;
 }
 
-
 ul li { list-style: square; }
 
 a{  font-family: "メイリオ", Arial, sans-serif;
@@ -33,7 +32,3 @@ a:hover { background-color: #ffff95; }
 
 input.err { background-color: orange; }
 
-.layout .header { background-color: orange; }
-.layout .menu { background-color: aqua; height: 300px; vertical-align: top;}
-.layout .content { background-color: white;  text-align: center; }
-.layout .footer { background-color: black; color: white; }
