@@ -55,11 +55,6 @@ public class EmpAction {
     @Resource
     protected HttpServletResponse response;
 
-//    @Resource
-//    protected ServletContext application;
-
-//    @Resource
-//    protected S2CSVCtrlFactory s2CSVCtrlFactory;
 
     /*****************************
      * 一覧
