@@ -31,11 +31,13 @@ public class EmpAction {
     private static final String PRE_PAGE_EDIT = "edit";
     private static final String PRE_PAGE_CREATE = "create";
     private static final String PRE_PAGE_DELETE = "delete";
+    private static final String PRE_PAGE_SEARCH = "search";
 	public static String outPutFileName = "C:\\Users\\fc10m\\Documents\\tmp";
 	public static String outReadFileName = "C:\\Users\\fc10m\\Documents\\tmp";
 	public static String csvExt = ".csv";
 
     public List<Emp> empItems;
+    public List<EmpDto> empDtoList = new ArrayList<EmpDto>();
 
     public JdbcManager jdbcManager;
 
@@ -133,8 +135,9 @@ public class EmpAction {
 	@Execute(validator = false)
 	public String create() {
 		// 新規作成のときのIDをフォームに設定
-		final long count = jdbcManager.from(Emp.class).getCount();
-		empForm.id = String.valueOf(count + 1);
+		//      ==> フォームで初期値を入れれば不要だったので削除
+		//final long count = jdbcManager.from(Emp.class).getCount();
+		//empForm.id = String.valueOf(count + 1);
 
 		return "create.jsp";
 	}
@@ -170,6 +173,9 @@ public class EmpAction {
 
 	@Execute(validator = false)
 	public String searchExe() {
+		// 呼び出し元ページ情報
+		empForm.prePage = PRE_PAGE_SEARCH;
+
 		// プロパティが空文字だったらnullに変換する
 		if(empForm.id.isEmpty()) empForm.id = null;
 		if(empForm.empId.isEmpty()) empForm.empId = null;
@@ -187,6 +193,14 @@ public class EmpAction {
 								.orderBy("empId")
 								.getResultList();
 
+		// List<Emp> empItems -> List<EmpDto> empDtoList
+		//  で別メソッドに渡せるかと思ったけどダメ
+		//
+		//for(Emp e: empItems){
+		//	EmpDto ed = new EmpDto();
+		//	BeanUtil.copyProperties(e, ed);
+		//	empDtoList.add(ed);
+		//}
 
 		return "result.jsp";
 	}
@@ -198,11 +212,22 @@ public class EmpAction {
 	@Execute(validator = false)
 	public String download() {
 		// DBからデータを取得
-		empItems = jdbcManager.from(Emp.class)
+		//if(!(empForm.prePage.equals(PRE_PAGE_SEARCH))){
+			empItems = jdbcManager.from(Emp.class)
 					.orderBy("empId")
 					.getResultList();
+		//}
 
-		// List -> S2CSV に値を入れる
+		// List<EmpDto> empDtoList -> List<Emp> empItems に値をコピー
+		//  で別メソッドに渡せるかと思ったけどダメ
+		//
+		//for(EmpDto ed: empDtoList){
+		//	Emp e = new Emp();
+		//	BeanUtil.copyProperties(e, ed);
+		//	empItems.add(e);
+		//}
+
+		// List<Emp> empItems -> List<EmpCsv> csvList に値をコピー
 		List<EmpCsv> csvList = new ArrayList<EmpCsv>();
 
 		for (Emp row : empItems) {								//拡張for

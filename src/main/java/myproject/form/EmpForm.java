@@ -6,7 +6,7 @@ import org.seasar.struts.annotation.Required;
 public class EmpForm {
 	@Required
 	@IntegerType
-	public String id = "";
+	public String id = "0";
 
 	@Required
 	@IntegerType

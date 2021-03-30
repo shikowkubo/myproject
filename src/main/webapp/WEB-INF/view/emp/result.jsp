@@ -8,7 +8,7 @@
 
 <html:errors/>
 <s:form>
-
+<html:hidden property="prePage" />
 <table>
 <tr style="background-color:#A9F5BC">
 	<th>社員ID</th>
@@ -31,6 +31,9 @@
 </tr>
 </c:forEach>
 </table>
+<%--
+<s:submit property="download" value="CSV出力" />
+ --%>
 <br /><br />
 <a href="javascript:history.back()">戻る</a>
 <s:link href="/">top</s:link>
