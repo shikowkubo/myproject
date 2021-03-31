@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="2" failures="0" name="myproject.entity.GenderDbTest" time="0.096" errors="0" skipped="0">
+<testsuite tests="2" failures="0" name="myproject.entity.GenderDbTest" time="0.08" errors="2" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\pleiades\eclipse\jre\jre\bin"/>
@@ -27,7 +27,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\code\java7\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3990529417707682687.tmp"/>
+    <property name="classworlds.conf" value="C:\code\java7\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf533244324978793353.tmp"/>
     <property name="sun.jnu.encoding" value="MS932"/>
     <property name="java.library.path" value="C:\pleiades\eclipse\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/pleiades/eclipse/jre/bin/../jre/bin/server;C:/pleiades/eclipse/jre/bin/../jre/bin;C:/pleiades/eclipse/jre/bin/../jre/lib/amd64;C:\app\oracle\client\client_home\bin;C:\app\oracle\product\19.3.0\dbhome_1\bin;C:\Program Files\Python38\Scripts\;C:\Program Files\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Streamlink\bin;C:\Program Files (x86)\Nodist\bin;C:\pleiades\java\7\bin;%CATALINA_HOME%\bin;C:\maven\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Users\fc10m\scoop\shims;C:\Users\fc10m\AppData\Local\Microsoft\WindowsApps;C:\Users\fc10m\AppData\Local\atom\bin;C:\Users\fc10m\AppData\Local\Microsoft\WindowsApps;C:\Users\fc10m\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fc10m\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;C:\pleiades\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -61,6 +61,186 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="myproject.entity.GenderDbTest" name="testLeftOuterJoin_empList" time="0.044"/>
-  <testcase classname="myproject.entity.GenderDbTest" name="testFindById" time="0.052"/>
+  <testcase classname="myproject.entity.GenderDbTest" name="testLeftOuterJoin_empList" time="0.036">
+    <error message="[ESSR0072]SQLで例外(SQL=[], Message=[Cannot load connection class because of underlying exception: &apos;java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;&apos;. : [For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;], ErrorCode=0, SQLState=08001)が発生しました" type="org.seasar.framework.exception.SQLRuntimeException">org.seasar.framework.exception.SQLRuntimeException: [ESSR0072]SQLで例外(SQL=[], Message=[Cannot load connection class because of underlying exception: &apos;java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;&apos;. : [For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;], ErrorCode=0, SQLState=08001)が発生しました
+	at org.seasar.extension.jdbc.util.DataSourceUtil.getConnection(DataSourceUtil.java:53)
+	at org.seasar.extension.jdbc.manager.JdbcManagerImpl.getJdbcContext(JdbcManagerImpl.java:381)
+	at org.seasar.extension.jdbc.query.AbstractSelect.getSingleResultInternal(AbstractSelect.java:246)
+	at org.seasar.extension.jdbc.query.AbstractSelect.getSingleResult(AbstractSelect.java:182)
+	at myproject.entity.GenderDbTest.testLeftOuterJoin_empList(GenderDbTest.java:44)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at org.seasar.framework.unit.S2FrameworkTestCase.doRunTest(S2FrameworkTestCase.java:519)
+	at org.seasar.extension.unit.S2TestCase.doRunTest(S2TestCase.java:103)
+	at org.seasar.framework.unit.S2FrameworkTestCase.runBare(S2FrameworkTestCase.java:308)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:232)
+	at junit.framework.TestSuite.run(TestSuite.java:227)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:81)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot load connection class because of underlying exception: &apos;java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;&apos;.
+	at sun.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:336)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.seasar.extension.dbcp.impl.XADataSourceImpl.getXAConnection(XADataSourceImpl.java:168)
+	at org.seasar.extension.dbcp.impl.XADataSourceImpl.getXAConnection(XADataSourceImpl.java:151)
+	at org.seasar.extension.dbcp.impl.ConnectionPoolImpl.createConnection(ConnectionPoolImpl.java:446)
+	at org.seasar.extension.dbcp.impl.ConnectionPoolImpl.checkOut(ConnectionPoolImpl.java:366)
+	at org.seasar.extension.dbcp.impl.DataSourceImpl.getConnection(DataSourceImpl.java:59)
+	at org.seasar.extension.jdbc.util.DataSourceUtil.getConnection(DataSourceUtil.java:51)
+	... 31 more
+Caused by: java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.mysql.jdbc.NonRegisteringDriver.port(NonRegisteringDriver.java:823)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	... 39 more
+</error>
+    <system-out>DEBUG 2021-03-31 16:42:43,472 [main] ���ϐ�#Env�Ƀt�@�C��(env_ut.txt)����l(ut)���ݒ肳��܂���
+DEBUG 2021-03-31 16:42:43,474 [main] S2Container���쐬���܂��Bpath=warmdeploy.dicon
+DEBUG 2021-03-31 16:42:43,475 [main] S2Container���쐬���܂��Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,477 [main] S2Container���쐬���܂����Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,478 [main] S2Container���쐬���܂��Bpath=customizer.dicon
+DEBUG 2021-03-31 16:42:43,479 [main] S2Container���쐬���܂��Bpath=default-customizer.dicon
+DEBUG 2021-03-31 16:42:43,481 [main] S2Container���쐬���܂��Bpath=std-customizer.dicon
+DEBUG 2021-03-31 16:42:43,483 [main] S2Container���쐬���܂��Bpath=std-customizer-tiger.dicon
+DEBUG 2021-03-31 16:42:43,484 [main] S2Container���쐬���܂����Bpath=std-customizer-tiger.dicon
+DEBUG 2021-03-31 16:42:43,487 [main] S2Container���쐬���܂����Bpath=std-customizer.dicon
+DEBUG 2021-03-31 16:42:43,488 [main] S2Container���쐬���܂����Bpath=default-customizer.dicon
+DEBUG 2021-03-31 16:42:43,489 [main] S2Container���쐬���܂����Bpath=customizer.dicon
+DEBUG 2021-03-31 16:42:43,489 [main] S2Container���쐬���܂��Bpath=creator.dicon
+DEBUG 2021-03-31 16:42:43,491 [main] S2Container���쐬���܂����Bpath=creator.dicon
+DEBUG 2021-03-31 16:42:43,492 [main] S2Container���쐬���܂����Bpath=warmdeploy.dicon
+DEBUG 2021-03-31 16:42:43,494 [main] S2Container���쐬���܂��Bpath=s2jdbc.dicon
+DEBUG 2021-03-31 16:42:43,496 [main] S2Container���쐬���܂��Bpath=jdbc.dicon
+DEBUG 2021-03-31 16:42:43,498 [main] S2Container���쐬���܂��Bpath=jta.dicon
+DEBUG 2021-03-31 16:42:43,500 [main] S2Container���쐬���܂����Bpath=jta.dicon
+DEBUG 2021-03-31 16:42:43,501 [main] S2Container���쐬���܂����Bpath=jdbc.dicon
+DEBUG 2021-03-31 16:42:43,501 [main] S2Container���쐬���܂��Bpath=s2jdbc-internal.dicon
+DEBUG 2021-03-31 16:42:43,503 [main] S2Container���쐬���܂��Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,505 [main] S2Container���쐬���܂����Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,506 [main] S2Container���쐬���܂����Bpath=s2jdbc-internal.dicon
+DEBUG 2021-03-31 16:42:43,506 [main] S2Container���쐬���܂����Bpath=s2jdbc.dicon
+DEBUG 2021-03-31 16:42:43,512 [main] select T1_.ID as C1_, T1_.GENDER as C2_, T2_.ID as C3_, T2_.EMP_ID as C4_, T2_.NAME as C5_, T2_.AGE as C6_, T2_.GENDER_ID as C7_, T2_.ADDRESS as C8_, T2_.DEPT_ID as C9_ from GENDER_DB T1_ left outer join EMP T2_ on T2_.GENDER_ID = T1_.ID where T1_.ID = 1
+DEBUG 2021-03-31 16:42:43,515 [main] ���ϐ�#Env�Ƀt�@�C��(env.txt)����l(ct)���ݒ肳��܂���
+</system-out>
+  </testcase>
+  <testcase classname="myproject.entity.GenderDbTest" name="testFindById" time="0.044">
+    <error message="[ESSR0072]SQLで例外(SQL=[], Message=[Cannot load connection class because of underlying exception: &apos;java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;&apos;. : [For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;], ErrorCode=0, SQLState=08001)が発生しました" type="org.seasar.framework.exception.SQLRuntimeException">org.seasar.framework.exception.SQLRuntimeException: [ESSR0072]SQLで例外(SQL=[], Message=[Cannot load connection class because of underlying exception: &apos;java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;&apos;. : [For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;], ErrorCode=0, SQLState=08001)が発生しました
+	at org.seasar.extension.jdbc.util.DataSourceUtil.getConnection(DataSourceUtil.java:53)
+	at org.seasar.extension.jdbc.manager.JdbcManagerImpl.getJdbcContext(JdbcManagerImpl.java:381)
+	at org.seasar.extension.jdbc.query.AbstractSelect.getSingleResultInternal(AbstractSelect.java:246)
+	at org.seasar.extension.jdbc.query.AbstractSelect.getSingleResult(AbstractSelect.java:182)
+	at myproject.entity.GenderDbTest.testFindById(GenderDbTest.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at junit.framework.TestCase.runTest(TestCase.java:168)
+	at org.seasar.framework.unit.S2FrameworkTestCase.doRunTest(S2FrameworkTestCase.java:519)
+	at org.seasar.extension.unit.S2TestCase.doRunTest(S2TestCase.java:103)
+	at org.seasar.framework.unit.S2FrameworkTestCase.runBare(S2FrameworkTestCase.java:308)
+	at junit.framework.TestResult$1.protect(TestResult.java:110)
+	at junit.framework.TestResult.runProtected(TestResult.java:128)
+	at junit.framework.TestResult.run(TestResult.java:113)
+	at junit.framework.TestCase.run(TestCase.java:124)
+	at junit.framework.TestSuite.runTest(TestSuite.java:232)
+	at junit.framework.TestSuite.run(TestSuite.java:227)
+	at org.junit.internal.runners.JUnit38ClassRunner.run(JUnit38ClassRunner.java:81)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Cannot load connection class because of underlying exception: &apos;java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;&apos;.
+	at sun.reflect.GeneratedConstructorAccessor7.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:404)
+	at com.mysql.jdbc.Util.getInstance(Util.java:387)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:917)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:896)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:885)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:860)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:336)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:208)
+	at org.seasar.extension.dbcp.impl.XADataSourceImpl.getXAConnection(XADataSourceImpl.java:168)
+	at org.seasar.extension.dbcp.impl.XADataSourceImpl.getXAConnection(XADataSourceImpl.java:151)
+	at org.seasar.extension.dbcp.impl.ConnectionPoolImpl.createConnection(ConnectionPoolImpl.java:446)
+	at org.seasar.extension.dbcp.impl.ConnectionPoolImpl.checkOut(ConnectionPoolImpl.java:366)
+	at org.seasar.extension.dbcp.impl.DataSourceImpl.getConnection(DataSourceImpl.java:59)
+	at org.seasar.extension.jdbc.util.DataSourceUtil.getConnection(DataSourceUtil.java:51)
+	... 31 more
+Caused by: java.lang.NumberFormatException: For input string: &quot;3904f97c@us-cdbr-east-03.cleardb.com&quot;
+	at java.lang.NumberFormatException.forInputString(NumberFormatException.java:65)
+	at java.lang.Integer.parseInt(Integer.java:580)
+	at java.lang.Integer.parseInt(Integer.java:615)
+	at com.mysql.jdbc.NonRegisteringDriver.port(NonRegisteringDriver.java:823)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:328)
+	... 39 more
+</error>
+    <system-out>DEBUG 2021-03-31 16:42:43,515 [main] ���ϐ�#Env�Ƀt�@�C��(env_ut.txt)����l(ut)���ݒ肳��܂���
+DEBUG 2021-03-31 16:42:43,518 [main] S2Container���쐬���܂��Bpath=warmdeploy.dicon
+DEBUG 2021-03-31 16:42:43,519 [main] S2Container���쐬���܂��Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,521 [main] S2Container���쐬���܂����Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,521 [main] S2Container���쐬���܂��Bpath=customizer.dicon
+DEBUG 2021-03-31 16:42:43,522 [main] S2Container���쐬���܂��Bpath=default-customizer.dicon
+DEBUG 2021-03-31 16:42:43,523 [main] S2Container���쐬���܂��Bpath=std-customizer.dicon
+DEBUG 2021-03-31 16:42:43,524 [main] S2Container���쐬���܂��Bpath=std-customizer-tiger.dicon
+DEBUG 2021-03-31 16:42:43,526 [main] S2Container���쐬���܂����Bpath=std-customizer-tiger.dicon
+DEBUG 2021-03-31 16:42:43,528 [main] S2Container���쐬���܂����Bpath=std-customizer.dicon
+DEBUG 2021-03-31 16:42:43,529 [main] S2Container���쐬���܂����Bpath=default-customizer.dicon
+DEBUG 2021-03-31 16:42:43,530 [main] S2Container���쐬���܂����Bpath=customizer.dicon
+DEBUG 2021-03-31 16:42:43,530 [main] S2Container���쐬���܂��Bpath=creator.dicon
+DEBUG 2021-03-31 16:42:43,533 [main] S2Container���쐬���܂����Bpath=creator.dicon
+DEBUG 2021-03-31 16:42:43,533 [main] S2Container���쐬���܂����Bpath=warmdeploy.dicon
+DEBUG 2021-03-31 16:42:43,535 [main] S2Container���쐬���܂��Bpath=s2jdbc.dicon
+DEBUG 2021-03-31 16:42:43,536 [main] S2Container���쐬���܂��Bpath=jdbc.dicon
+DEBUG 2021-03-31 16:42:43,537 [main] S2Container���쐬���܂��Bpath=jta.dicon
+DEBUG 2021-03-31 16:42:43,539 [main] S2Container���쐬���܂����Bpath=jta.dicon
+DEBUG 2021-03-31 16:42:43,540 [main] S2Container���쐬���܂����Bpath=jdbc.dicon
+DEBUG 2021-03-31 16:42:43,540 [main] S2Container���쐬���܂��Bpath=s2jdbc-internal.dicon
+DEBUG 2021-03-31 16:42:43,542 [main] S2Container���쐬���܂��Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,543 [main] S2Container���쐬���܂����Bpath=convention.dicon
+DEBUG 2021-03-31 16:42:43,544 [main] S2Container���쐬���܂����Bpath=s2jdbc-internal.dicon
+DEBUG 2021-03-31 16:42:43,544 [main] S2Container���쐬���܂����Bpath=s2jdbc.dicon
+DEBUG 2021-03-31 16:42:43,555 [main] select T1_.ID as C1_, T1_.GENDER as C2_ from GENDER_DB T1_ where T1_.ID = 1
+DEBUG 2021-03-31 16:42:43,559 [main] ���ϐ�#Env�Ƀt�@�C��(env.txt)����l(ct)���ݒ肳��܂���
+</system-out>
+  </testcase>
 </testsuite>

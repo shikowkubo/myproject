@@ -120,10 +120,10 @@
 			"com.mysql.jdbc.Driver"
 		</property>
 		<property name="URL">
-			"jdbc:mysql://b273615e219e65:3904f97c@us-cdbr-east-03.cleardb.com/heroku_71979d45b312047?reconnect=true&amp;useSSL=false"
+			"jdbc:mysql://localhost:3306/sakura?useSSL=false"
 		</property>
-		<property name="user">"heroku_71979d45b312047"</property>
-		<property name="password">"3904f97c"</property>
+		<property name="user">"appuser"</property>
+		<property name="password">"password"</property>
 	</component>
 
 
