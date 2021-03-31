@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="1" failures="0" name="myproject.entity.SqlFileTest" time="0.034" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="myproject.entity.SqlFileTest" time="0.03" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\pleiades\eclipse\jre\jre\bin"/>
@@ -27,9 +27,9 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\code\java7\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf2687037438275750307.tmp"/>
+    <property name="classworlds.conf" value="C:\code\java7\workspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3990529417707682687.tmp"/>
     <property name="sun.jnu.encoding" value="MS932"/>
-    <property name="java.library.path" value="C:\pleiades\eclipse\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/pleiades/eclipse/jre/bin/../jre/bin/server;C:/pleiades/eclipse/jre/bin/../jre/bin;C:/pleiades/eclipse/jre/bin/../jre/lib/amd64;C:\app\oracle\client\client_home\bin;C:\app\oracle\product\19.3.0\dbhome_1\bin;C:\Program Files\Python38\Scripts\;C:\Program Files\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Streamlink\bin;C:\Program Files (x86)\Nodist\bin;C:\pleiades 4.5 mars\java\7\bin;%CATALINA_HOME%\bin;C:\maven\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Users\fc10m\scoop\shims;C:\Users\fc10m\AppData\Local\Microsoft\WindowsApps;C:\Users\fc10m\AppData\Local\atom\bin;C:\Users\fc10m\AppData\Local\Microsoft\WindowsApps;C:\Users\fc10m\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fc10m\AppData\Local\GitHubDesktop\bin;C:\pleiades\eclipse;;."/>
+    <property name="java.library.path" value="C:\pleiades\eclipse\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:/pleiades/eclipse/jre/bin/../jre/bin/server;C:/pleiades/eclipse/jre/bin/../jre/bin;C:/pleiades/eclipse/jre/bin/../jre/lib/amd64;C:\app\oracle\client\client_home\bin;C:\app\oracle\product\19.3.0\dbhome_1\bin;C:\Program Files\Python38\Scripts\;C:\Program Files\Python38\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Streamlink\bin;C:\Program Files (x86)\Nodist\bin;C:\pleiades\java\7\bin;%CATALINA_HOME%\bin;C:\maven\bin;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Users\fc10m\scoop\shims;C:\Users\fc10m\AppData\Local\Microsoft\WindowsApps;C:\Users\fc10m\AppData\Local\atom\bin;C:\Users\fc10m\AppData\Local\Microsoft\WindowsApps;C:\Users\fc10m\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\fc10m\AppData\Local\GitHubDesktop\bin;C:\Program Files\heroku\bin;C:\pleiades\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
@@ -61,5 +61,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="myproject.entity.SqlFileTest" name="test" time="0.034"/>
+  <testcase classname="myproject.entity.SqlFileTest" name="test" time="0.03"/>
 </testsuite>
